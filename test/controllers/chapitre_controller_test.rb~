@@ -1,0 +1,14 @@
+require 'test_helper'
+
+class ChapitreControllerTest < ActionDispatch::IntegrationTest
+  test "should get chapitre1" do
+    get chapitre_chapitre1_url
+    assert_response :success
+  end
+
+  test "should get chapitre2" do
+    get chapitre_chapitre2_url
+    assert_response :success
+  end
+
+end
