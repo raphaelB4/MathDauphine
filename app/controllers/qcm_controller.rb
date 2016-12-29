@@ -10,9 +10,10 @@ class QcmController < ApplicationController
      render html: estValide?(@repondre.to_i,42)
   end
 
+
   def estValide?(x,y)
   if x==y
-    return "la réponse est correcte."
+    return "¡la réponse est correcte!"
   else
     return "la réponse est fausse."
   end

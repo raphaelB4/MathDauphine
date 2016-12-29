@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   root 'page_statique#hall'
   get '/hall', to: 'page_statique#hall'
   get '/chapitre1', to: 'chapitre#chapitre1'
@@ -7,8 +9,14 @@ Rails.application.routes.draw do
   get 'page_statique/hall'
   get 'qcm/exercice1'
   post   '/repondre',   to: 'qcm#repondre'
+
   get  '/signup',  to: 'students#new'
   post '/signup',  to: 'students#create'
+
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
  
   resources :eleves
   resources :students
