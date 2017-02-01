@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'exercices/show'
+
+  get 'chapters/show'
+
   get 'sessions/new'
 
   root 'page_statique#hall'
@@ -20,6 +24,13 @@ Rails.application.routes.draw do
  
   resources :eleves
   resources :students
+  resources :chapters
+  resources :exercices do
+    member do
+      post :correction
+    end
+  end
 
+  mathjax 'mathjax'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

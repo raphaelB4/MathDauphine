@@ -25,5 +25,6 @@ test "invalid signup information" do
     end
     follow_redirect!
     assert_template 'students/show'
+    assert is_logged_in?
   end
 end
