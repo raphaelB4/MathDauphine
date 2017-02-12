@@ -1,9 +1,12 @@
 class ExercicesController < ApplicationController
+  
+ #Envoie le fichier view exercice au navigateur
   def show
     @exercice = Exercice.find(params[:id])
     
   end
 
+  #Correction pour un QCM, le numéro c'est le nombre de choix que l'on pose au QCM. Pour le moment le nombre est limité à 4
   def correction
     @exercice = Exercice.find(params[:id])
     @numero=@exercice.nature

@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+  
+  #utilise les liens préfabriqués de Routes.
   def new
     @student=Student.new
   end

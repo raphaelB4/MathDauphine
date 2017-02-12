@@ -1,5 +1,7 @@
 class QcmController < ApplicationController
   
+
+  #Des brouillons, à supprimer ou à déplacer dans la partie exercice
   def exercice1
      @repondre=String.new
      render 'exercice1'

@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  
+  #permet de créer un compte pour chaque utilisateur.
   def new
   end
 
