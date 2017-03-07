@@ -7,6 +7,7 @@ class StudentsController < ApplicationController
 
   def show
     @student=Student.find(params[:id])
+    @solved_exercices=@student.schooling
   end
 
    def create

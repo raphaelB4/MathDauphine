@@ -12,5 +12,16 @@ Student.create!(name:  "Raphael",
              password_confirmation: "auietsrn",
              admin: true)
 
-Chapter.create!()
+Chapter.create!(name: "Espaces vectoriels")
+
+ch=Chapter.find_by(name: "Espaces vectoriels")
+
+exo=ch.exercices.create!(issue: "enonce000",
+statement: '<p>Dans $ \mathbb{R}^3 $, le vecteur $(1,2,3)$ est il combinaison lineaire des vecteurs $(-2,3,1)$ et $(1,-1,0)$?</p>',
+nature: 0,
+answer: 7,
+solution: "solution000"
+)
+
+
 

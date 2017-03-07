@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208133352) do
+ActiveRecord::Schema.define(version: 20170301092422) do
 
   create_table "chapters", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "corrections", force: :cascade do |t|
@@ -37,12 +38,14 @@ ActiveRecord::Schema.define(version: 20170208133352) do
 
   create_table "exercices", force: :cascade do |t|
     t.integer  "chapter_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "issue"
     t.string   "solution"
     t.integer  "answer"
-    t.integer  "nature"
+    t.integer  "nature",             default: 0
+    t.text     "statement"
+    t.text     "solution_statement"
     t.index ["chapter_id"], name: "index_exercices_on_chapter_id"
   end
 

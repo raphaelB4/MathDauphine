@@ -17,6 +17,10 @@ module SessionsHelper
     !current_student.nil?
   end
 
+  def is_admin?
+    (!current_student.nil? && current_student.admin)
+  end
+
   # Log out
   def log_out
     session.delete(:student_id)

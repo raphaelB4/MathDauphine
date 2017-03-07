@@ -2,6 +2,10 @@
 
 one:
   chapter: one
+  statement: "Un probleme ouvert"
+  answer: 42
 
 two:
   chapter: two
+  statement: "Un problème ouvert"
+  answer: 42
