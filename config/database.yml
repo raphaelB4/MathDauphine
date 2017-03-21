@@ -23,4 +23,4 @@ test:
 production:
   adapter: postgresql
 # <<: *default
-  database: db/mission
+  database: db/production.sqlite3
