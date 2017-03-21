@@ -40,13 +40,13 @@ class ExercicesController < ApplicationController
    end
 
     if @ans==@exercice.answer
-	     flash.now[:success] = "Bonne réponse!"
+       flash.now[:success] = "Bonne réponse!"
        if logged_in?
        if (not current_student.has_solved?(@exercice))
-      current_student.solve(@exercice)
-      end
-      end
-     else
+         current_student.solve(@exercice)
+       end
+       end
+      else
       str= " "
       str << " Mauvaise réponse."
       flash.now[:danger] = str

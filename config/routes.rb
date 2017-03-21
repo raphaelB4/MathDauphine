@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'page_statique#hall'
   get '/hall', to: 'page_statique#hall'
   get '/listes', to: 'page_statique#listes'
+  get '/etudiants', to: 'page_statique#etudiants'
+
   get '/chapitre1', to: 'chapitre#chapitre1'
   get '/chapitre2', to: 'chapitre#chapitre2'
   get 'page_statique/hall'
