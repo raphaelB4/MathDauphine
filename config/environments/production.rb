@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #Modification du 16 mars, pour régler un problème d'affichage.
+  config.public_file_server.enabled = true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -23,7 +26,8 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  # modifier le 17 mars pour boostrap
+  config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -67,6 +71,9 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+
+
+config.secret_key_base ='1e26e9c2b4d3067b37ff2de11961a7f79b8479453580c753c78ea4d7437dfdc2ab321a942486b897e1442cebb10974bb80a677b838cb418726a7702f85e379fa'
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new

@@ -1,0 +1,15 @@
+Rapport du 22/12
+
+Il y a quelques avancés : 
+-on peut assez facilement transformer un fichier latex en page html avec le programme tex4ht
+-pour récupérer le résultat d'un QCM il suffit de d'utiliser params
+-j'ai réproduit la page d'inscription
+
+Il faut maintenant
+-faire la page de connection (plus tard la )
+-écrire les qcms ()
+-mettre en page les cours
+-créer un profile administrateur
+-afficher la liste des élèves et leurs résultats
+
+

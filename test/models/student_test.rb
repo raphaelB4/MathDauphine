@@ -28,4 +28,16 @@ def setup
     @student.password = @student.password_confirmation = "a" * 5
     assert_not @student.valid?
   end
+
+  test "should solve and unsolve a problem" do
+    bob = students(:bob)
+    one  = exercices(:one)
+    assert_not bob.has_solved?(one)
+    bob.solve(one)
+    assert bob.has_solved?(one)
+    assert one.pupils.include?(bob)
+    bob.unsolve(one)
+    assert_not bob.has_solved?(one)
+  end
+
 end
